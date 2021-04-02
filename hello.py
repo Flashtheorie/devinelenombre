@@ -3,33 +3,33 @@
 import random 
 import os
 
-
+argent = 0
 while True:
-	argent = int(0)
 	print("A vous de trouver le nombre entre 1 et 100");
 	nombre = 0
 	rand = random.randint(1,100)
-
-	while rand != nombre:
-		nombre = int(input("Votre choix ?"));
-		if rand > nombre:
-			print("Le nombre est plus grand")
-		pass
-
-		if rand < nombre:
-			print("Le nombre est plus petit")
-		pass
-
-		if rand == nombre:
-			print("Bravo !")
-			argent = argent + 5
-		pass
-		if nombre == "hint":
-			a = rand - 10
-			b = rand + 10
-			print("Le nombre est compris entre ", a, " et ", b)
-			argent = argent - 10
+	if type(nombre == int):
+		while rand != nombre:
+			nombre = int(input("Votre choix ? (0 pour un indice)"));
+			if rand > nombre:
+				print("Le nombre est plus grand")
 			pass
 
-	print("Vous avez " , argent , "€")
+			if rand < nombre:
+				print("Le nombre est plus petit")
+			pass
+
+			if rand == nombre:
+				print("Bravo !")
+				argent = int(argent + 5) 
+				print("Vous avez " , argent , "€")
+			pass
+			if nombre == 0:
+				a = rand - 10
+				b = rand + 10
+				print("Le nombre est compris entre ", a, " et ", b)
+				argent = argent - 10
+				pass
+
+	
 
