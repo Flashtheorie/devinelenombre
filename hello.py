@@ -25,11 +25,14 @@ while True:
 				print("Vous avez " , argent , "€")
 			pass
 			if nombre == 0:
-				a = rand - 10
-				b = rand + 10
-				print("Le nombre est compris entre ", a, " et ", b)
-				argent = argent - 10
-				pass
+				if argent >= 10:
+					a = rand - 10
+					b = rand + 10
+					print("Le nombre est compris entre ", a, " et ", b)
+					argent = argent - 10
+					pass
+				else:
+					print("Vous n'avez pas assez d'argent.")
 
 	
 
